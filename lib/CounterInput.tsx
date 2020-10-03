@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { TextInput, View, Image } from "react-native";
 import RNBounceable from "@freakycoder/react-native-bounceable";
 /**
@@ -33,7 +33,7 @@ interface IState {
   isPressed: boolean;
 }
 
-export default class CounterInput extends Component<
+export default class CounterInput extends React.Component<
   ICounterInputProps,
   IState
 > {
