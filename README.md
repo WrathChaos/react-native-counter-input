@@ -74,6 +74,7 @@ import CounterInput from "react-native-counter-input";
 - [x] ~~LICENSE~~
 - [x] ~~Horizontal Feature~~
 - [ ] Animation
+- [ ] Reverse Horizontal +/- Buttons Option
 - [ ] Write an article about the lib on Medium
 
 ## Credits
