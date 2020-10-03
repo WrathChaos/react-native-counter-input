@@ -10,9 +10,9 @@
 
 <p align="center">
   <img alt="React Native Counter Input"
-        src="assets/Screenshots/RN-Counter-Input.png" width="500" />
+        src="assets/Screenshots/RN-Counter-Input.png" width="450" />
   <img alt="React Native Counter Input"
-        src="assets/Screenshots/RN-Counter-Input.gif" width="500" />
+        src="assets/Screenshots/RN-Counter-Input.gif" width="450" />
 </p>
 
 <p align="center">
