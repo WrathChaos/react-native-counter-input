@@ -123,8 +123,8 @@ export default class CounterInput extends Component<
           width: 40,
           height: 40,
           fontSize: 24,
-          marginTop: 16,
-          marginBottom: 12,
+          marginTop: 12,
+          marginBottom: 8,
           alignSelf: "center",
           fontWeight: "bold",
           textAlign: "center",
@@ -145,11 +145,10 @@ export default class CounterInput extends Component<
     return (
       <View
         style={{
-          height: 150,
-          paddingTop: 16,
-          paddingBottom: 16,
-          paddingLeft: 10,
-          paddingRight: 10,
+          paddingTop: 7,
+          paddingBottom: 7,
+          paddingLeft: 9,
+          paddingRight: 9,
           borderRadius: 24,
           backgroundColor: "#fff",
           alignItems: "center",
