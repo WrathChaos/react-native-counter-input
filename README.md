@@ -15,6 +15,11 @@
         src="assets/Screenshots/RN-Counter-Input.gif" width="500" />
 </p>
 
+<p align="center">
+  <img alt="React Native Counter Input"
+        src="assets/Screenshots/RN-Counter-Input-Horizontal.png"  />
+</p>
+
 # Installation
 
 Add the dependency:
@@ -67,6 +72,7 @@ import CounterInput from "react-native-counter-input";
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [x] ~~Horizontal Feature~~
 - [ ] Animation
 - [ ] Write an article about the lib on Medium
 
