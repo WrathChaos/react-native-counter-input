@@ -25,8 +25,8 @@ export interface ICounterInputProps {
   decreaseButtonBackgroundColor?: string;
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
-  onChangeText?: (counter: number) => void;
-  onChange: (counter: number) => void;
+  onChangeText?: (counter: number | string) => void;
+  onChange: (counter: number | string) => void;
 }
 
 interface IState {
@@ -64,7 +64,8 @@ export default class CounterInput extends React.Component<
 
   handleOnChangeText = (text: string) => {
     const { onChange, onChangeText } = this.props;
-    this.setState({ counter: parseInt(text) }, () => {
+    let _number: number | string = parseInt(text) || "";
+    this.setState({ counter: _number }, () => {
       onChangeText && onChangeText(this.state.counter);
       onChange && onChange(this.state.counter);
     });

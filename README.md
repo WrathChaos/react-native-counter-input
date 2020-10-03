@@ -1,7 +1,5 @@
 <img alt="React Native Counter Input" src="assets/logo.png" width="1050"/>
 
-[![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)](https://github.com/WrathChaos/react-native-counter-input)
-
 [![Counter Input with fully customizable options for React Native](https://img.shields.io/badge/-Counter%20Input%20with%20fully%20customizable%20options%20for%20React%20Native-orange?style=for-the-badge)](https://github.com/WrathChaos/react-native-counter-input)
 
 [![npm version](https://img.shields.io/npm/v/react-native-counter-input.svg?style=for-the-badge)](https://www.npmjs.com/package/react-native-counter-input)
@@ -12,7 +10,9 @@
 
 <p align="center">
   <img alt="React Native Counter Input"
-        src="assets/Screenshots/typescript.jpg" />
+        src="assets/Screenshots/RN-Counter-Input.png" width="500" />
+  <img alt="React Native Counter Input"
+        src="assets/Screenshots/RN-Counter-Input.gif" width="500" />
 </p>
 
 # Installation
@@ -50,10 +50,6 @@ import CounterInput from "react-native-counter-input";
 ```
 
 # Configuration - Props
-
-ImageComponent?: any;
-increaseButtonBackgroundColor?: string;
-decreaseButtonBackgroundColor?: string;
 
 | Property                      |   Type    |  Default  | Description                                                                               |
 | ----------------------------- | :-------: | :-------: | ----------------------------------------------------------------------------------------- |
