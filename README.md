@@ -51,21 +51,28 @@ import CounterInput from "react-native-counter-input";
 
 # Configuration - Props
 
-| Property |  Type   | Default | Description                                             |
-| -------- | :-----: | :-----: | ------------------------------------------------------- |
-| outline  | boolean |  true   | make the button outline                                 |
-| solid    | boolean |  false  | make the button with a solid background and a shadow    |
-| gradient | boolean |  false  | make the button with a gradient background and a shadow |
-| width    | number  |   150   | change the button's width                               |
+ImageComponent?: any;
+increaseButtonBackgroundColor?: string;
+decreaseButtonBackgroundColor?: string;
+
+| Property                      |   Type    |  Default  | Description                                                                               |
+| ----------------------------- | :-------: | :-------: | ----------------------------------------------------------------------------------------- |
+| onChange                      | function  | undefined | set your own logic for onChange method, it triggers on any change                         |
+| horizontal                    |  boolean  |   false   | make the button horizontal design                                                         |
+| initial                       |  number   |     0     | set the initial value for the counter input                                               |
+| onChangeText                  | function  | undefined | it triggers when the TextInput changes                                                    |
+| onIncreasePress               | function  | undefined | it triggers when the increase button is pressed                                           |
+| onDecreasePress               | function  | undefined | it triggers when the decrease button is pressed                                           |
+| backgroundColor               |  string   |   #fff    | change the CounterInput's background color                                                |
+| increaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active increase button background color                         |
+| decreaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active decrease button background color                         |
+| ImageComponent                | component |   Image   | set your own Image component instead of default `RN Image` component such as; `FastImage` |
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] Animation
 - [ ] Write an article about the lib on Medium
-
-# Change Log
-
-Change log will be here !
 
 ## Author
 
