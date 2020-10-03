@@ -12,16 +12,17 @@ import CounterInput from "./lib/CounterInput";
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       <SafeAreaView
         style={{
           flex: 1,
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           backgroundColor: "#0f39a1",
         }}
       >
         <CounterInput />
+        <CounterInput horizontal />
       </SafeAreaView>
     </>
   );

@@ -14,6 +14,8 @@ const minusIconBlack = require("./local-assets/minus-black.png");
 
 export interface ICounterInputProps {
   ImageComponent?: any;
+  horizontal?: boolean;
+  initial?: number;
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
   onChangeText?: (counter: number) => void;
@@ -31,7 +33,7 @@ export default class CounterInput extends Component<
   constructor(props: ICounterInputProps) {
     super(props);
     this.state = {
-      counter: 0,
+      counter: props.initial || 0,
       isPressed: true, // if true: its for increase button, if false: its for decrease button
     };
   }
@@ -142,13 +144,16 @@ export default class CounterInput extends Component<
   };
 
   render() {
+    const { horizontal } = this.props;
     return (
       <View
         style={{
-          paddingTop: 7,
-          paddingBottom: 7,
-          paddingLeft: 9,
-          paddingRight: 9,
+          paddingTop: horizontal ? 0 : 7,
+          paddingBottom: horizontal ? 0 : 7,
+          paddingLeft: horizontal ? 0 : 9,
+          paddingRight: horizontal ? 0 : 9,
+          flexDirection: horizontal ? "row" : "column",
+          width: horizontal ? 170 : undefined,
           borderRadius: 24,
           backgroundColor: "#fff",
           alignItems: "center",
