@@ -22,8 +22,6 @@ const App = () => {
           style={{
             height: 450,
             width: "100%",
-            // alignItems: "center",
-            // justifyContent: "center",
             borderTopLeftRadius: 48,
             borderBottomLeftRadius: 48,
           }}
@@ -58,7 +56,7 @@ const App = () => {
               alignItems: "center",
             }}
           >
-            <View style={{ marginLeft: "auto", marginRight: 40 }}>
+            <View style={{ marginLeft: "auto", marginRight: 24 }}>
               <CounterInput />
             </View>
           </View>
