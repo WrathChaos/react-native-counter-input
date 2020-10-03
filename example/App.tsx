@@ -13,7 +13,14 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <SafeAreaView
+        style={{
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#0f39a1",
+        }}
+      >
         <CounterInput />
       </SafeAreaView>
     </>
