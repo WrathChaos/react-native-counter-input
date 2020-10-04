@@ -1,6 +1,6 @@
 {
   "name": "react-native-counter-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Counter Input with fully customizable options for React Native",
   "main": "./build/dist/CounterInput.js",
   "repository": "git@github.com:WrathChaos/react-native-counter-input.git",
