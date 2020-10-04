@@ -23,6 +23,9 @@ export interface ICounterInputProps {
   backgroundColor?: string;
   increaseButtonBackgroundColor?: string;
   decreaseButtonBackgroundColor?: string;
+  width?: number;
+  height?: number;
+  borderRadius?: number;
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
   onChangeText?: (counter: number | string) => void;
@@ -134,9 +137,23 @@ export default class CounterInput extends React.Component<
   };
 
   render() {
-    const { horizontal = false, backgroundColor = "#fff" } = this.props;
+    const {
+      horizontal = false,
+      backgroundColor = "#fff",
+      width = horizontal ? 170 : undefined,
+      height = horizontal ? 60 : undefined,
+      borderRadius = 24,
+    } = this.props;
     return (
-      <View style={_container(horizontal, backgroundColor)}>
+      <View
+        style={_container(
+          horizontal,
+          backgroundColor,
+          width,
+          height,
+          borderRadius,
+        )}
+      >
         {this.renderIncreaseCounter()}
         {this.renderTextInput()}
         {this.renderDecreaseCounter()}
