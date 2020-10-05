@@ -141,18 +141,11 @@ export default class CounterInput extends React.Component<
       horizontal = false,
       backgroundColor = "#fff",
       width = horizontal ? 170 : undefined,
-      height = horizontal ? 60 : undefined,
       borderRadius = 24,
     } = this.props;
     return (
       <View
-        style={_container(
-          horizontal,
-          backgroundColor,
-          width,
-          height,
-          borderRadius,
-        )}
+        style={_container(width, horizontal, backgroundColor, borderRadius)}
       >
         {this.renderIncreaseCounter()}
         {this.renderTextInput()}

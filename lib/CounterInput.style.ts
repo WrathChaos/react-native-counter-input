@@ -6,20 +6,18 @@ interface Style {
 }
 
 export const _container = (
+  width: number | undefined,
   horizontal: boolean,
   backgroundColor: string,
-  width: number,
-  height: number,
   borderRadius: number,
 ): ViewStyle => ({
-  padding: horizontal ? 0 : 9,
-  flexDirection: horizontal ? "row" : "column",
   width: width,
-  maxWidth: horizontal ? undefined : 70,
-  height: height,
-  minHeight: horizontal ? 45 : 140,
   backgroundColor,
   borderRadius: borderRadius,
+  padding: horizontal ? 0 : 9,
+  minHeight: horizontal ? 45 : 140,
+  maxWidth: horizontal ? undefined : 70,
+  flexDirection: horizontal ? "row" : "column",
   alignItems: "center",
   justifyContent: "space-evenly",
   shadowRadius: 5,
