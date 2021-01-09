@@ -147,9 +147,9 @@ export default class CounterInput extends React.Component<
       <View
         style={_container(width, horizontal, backgroundColor, borderRadius)}
       >
-        {this.renderIncreaseCounter()}
-        {this.renderTextInput()}
         {this.renderDecreaseCounter()}
+        {this.renderTextInput()}
+        {this.renderIncreaseCounter()}
       </View>
     );
   }

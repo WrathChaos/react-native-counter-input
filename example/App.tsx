@@ -66,7 +66,7 @@ const App = () => {
             </View>
           </View>
         </LinearGradient>
-        {/* <CounterInput horizontal /> */}
+        <CounterInput horizontal />
       </SafeAreaView>
     </>
   );

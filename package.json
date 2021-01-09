@@ -1,6 +1,6 @@
 {
   "name": "react-native-counter-input",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Counter Input with fully customizable options for React Native",
   "main": "./build/dist/CounterInput.js",
   "repository": "git@github.com:WrathChaos/react-native-counter-input.git",
@@ -40,16 +40,16 @@
     "react-native": ">= 0.55.x"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^0.0.5",
     "@types/react": "^16.9.22",
     "@types/react-native": "^0.63.0",
-    "react-native-typescript-transformer": "^1.2.13",
-    "typescript": "^3.7.4",
-    "@react-native-community/eslint-config": "^0.0.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react-native-typescript-transformer": "^1.2.13",
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
