@@ -58,6 +58,7 @@ import CounterInput from "react-native-counter-input";
 
 | Property                      |   Type    |  Default  | Description                                                                               |
 | ----------------------------- | :-------: | :-------: | ----------------------------------------------------------------------------------------- |
+| style                         |   style   |  default  | change/override the main container style                                                  |
 | horizontal                    |  boolean  |   false   | make the button horizontal design                                                         |
 | initial                       |  number   |     0     | set the initial value for the counter input                                               |
 | onChange                      | function  | undefined | set your own logic for onChange method, it triggers on any change                         |

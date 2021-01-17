@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextInput, View, Image } from "react-native";
+import { TextInput, View, Image, StyleProp, ViewStyle } from "react-native";
 import RNBounceable from "@freakycoder/react-native-bounceable";
 /**
  * ? Local Imports
@@ -16,7 +16,10 @@ const minusIconWhite = require("./local-assets/minus-white.png");
 const plusIconBlack = require("./local-assets/plus-black.png");
 const minusIconBlack = require("./local-assets/minus-black.png");
 
+type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
+
 export interface ICounterInputProps {
+  style?: CustomStyleProp;
   initial?: number;
   ImageComponent?: any;
   horizontal?: boolean;
@@ -138,6 +141,7 @@ export default class CounterInput extends React.Component<
 
   render() {
     const {
+      style,
       horizontal = false,
       backgroundColor = "#fff",
       width = horizontal ? 170 : undefined,
@@ -145,7 +149,10 @@ export default class CounterInput extends React.Component<
     } = this.props;
     return (
       <View
-        style={_container(width, horizontal, backgroundColor, borderRadius)}
+        style={[
+          _container(width, horizontal, backgroundColor, borderRadius),
+          style,
+        ]}
       >
         {this.renderDecreaseCounter()}
         {this.renderTextInput()}
