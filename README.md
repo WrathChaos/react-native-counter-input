@@ -58,9 +58,9 @@ import CounterInput from "react-native-counter-input";
 
 | Property                      |   Type    |  Default  | Description                                                                               |
 | ----------------------------- | :-------: | :-------: | ----------------------------------------------------------------------------------------- |
-| onChange                      | function  | undefined | set your own logic for onChange method, it triggers on any change                         |
 | horizontal                    |  boolean  |   false   | make the button horizontal design                                                         |
 | initial                       |  number   |     0     | set the initial value for the counter input                                               |
+| onChange                      | function  | undefined | set your own logic for onChange method, it triggers on any change                         |
 | onChangeText                  | function  | undefined | it triggers when the TextInput changes                                                    |
 | onIncreasePress               | function  | undefined | it triggers when the increase button is pressed                                           |
 | onDecreasePress               | function  | undefined | it triggers when the decrease button is pressed                                           |

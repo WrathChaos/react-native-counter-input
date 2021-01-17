@@ -29,7 +29,7 @@ export interface ICounterInputProps {
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
   onChangeText?: (counter: number | string) => void;
-  onChange: (counter: number | string) => void;
+  onChange: (counter: number) => void;
 }
 
 interface IState {
@@ -67,7 +67,7 @@ export default class CounterInput extends React.Component<
 
   handleOnChangeText = (text: string) => {
     const { onChange, onChangeText } = this.props;
-    let _number: number | string = parseInt(text) || "";
+    let _number: number = parseInt(text) || 0;
     this.setState({ counter: _number }, () => {
       onChangeText && onChangeText(this.state.counter);
       onChange && onChange(this.state.counter);
