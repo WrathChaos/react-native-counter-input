@@ -20,10 +20,10 @@ export const _container = (
   flexDirection: horizontal ? "row" : "column",
   alignItems: "center",
   justifyContent: "space-evenly",
-  shadowRadius: 5,
-  shadowOpacity: 0.3,
+  shadowRadius: 8,
+  shadowOpacity: 0.2,
   shadowColor: "#000",
-  elevation: 5,
+  elevation: 2,
   shadowOffset: {
     width: 0,
     height: 3,
@@ -71,7 +71,7 @@ export const _decreaseButtonStyle = (
 export default StyleSheet.create<Style>({
   textInputStyle: {
     width: 40,
-    height: 40,
+    minHeight: 40,
     fontSize: 24,
     marginTop: 12,
     marginBottom: 8,
