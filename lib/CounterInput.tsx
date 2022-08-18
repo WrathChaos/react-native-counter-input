@@ -28,6 +28,8 @@ export interface ICounterInputProps {
   decreaseButtonBackgroundColor?: string;
   width?: number;
   height?: number;
+  min?: number;
+  max?: number;
   borderRadius?: number;
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
@@ -53,28 +55,44 @@ export default class CounterInput extends React.Component<
   }
 
   handleOnIncreasePress = () => {
-    const { onChange, onIncreasePress } = this.props;
-    this.setState({ isPressed: true, counter: this.state.counter + 1 }, () => {
-      onIncreasePress && onIncreasePress(this.state.counter);
-      onChange && onChange(this.state.counter);
-    });
+    const { onChange, onIncreasePress,max } = this.props;
+    if(this.state.counter < max || max == undefined){
+      this.setState({ isPressed: true, counter: this.state.counter + 1 }, () => {
+        onIncreasePress && onIncreasePress(this.state.counter);
+        onChange && onChange(this.state.counter);
+      });
+    }
   };
 
   handleOnDecreasePress = () => {
-    const { onChange, onDecreasePress } = this.props;
-    this.setState({ isPressed: false, counter: this.state.counter - 1 }, () => {
-      onDecreasePress && onDecreasePress(this.state.counter);
-      onChange && onChange(this.state.counter);
-    });
+    const { onChange, onDecreasePress,min } = this.props;
+      if(this.state.counter > min || min == undefined){
+          this.setState({ isPressed: false, counter: this.state.counter - 1 }, () => {
+              onDecreasePress && onDecreasePress(this.state.counter);
+              onChange && onChange(this.state.counter);
+          });
+      }
   };
 
-  handleOnChangeText = (text: string) => {
-    const { onChange, onChangeText } = this.props;
-    let _number: number = parseInt(text) || 0;
-    this.setState({ counter: _number }, () => {
-      onChangeText && onChangeText(this.state.counter);
-      onChange && onChange(this.state.counter);
-    });
+  handleOnChangeText = (e: nativeEvent) => {
+    const { onChange, onChangeText,min,max } = this.props;
+    let _number = parseInt(e.nativeEvent.text) || 0;
+    let oldNumber = this.state.counter;
+    console.log(min,max);
+    if((_number < min && min != undefined) || (_number > max  && max != undefined)){
+        this.setState({counter: null }, () => {
+            this.setState({isPressed: false, counter:  oldNumber},()=>{
+                onChangeText && onChangeText(this.state.counter);
+                onChange && onChange(this.state.counter);
+            });
+        });
+    }else{
+        this.setState({counter: _number }, () => {
+            onChangeText && onChangeText(this.state.counter);
+            onChange && onChange(this.state.counter);
+        });
+
+    }
   };
 
   /* -------------------------------------------------------------------------- */
@@ -132,7 +150,7 @@ export default class CounterInput extends React.Component<
         numberOfLines={1}
         keyboardType="numeric"
         style={styles.textInputStyle}
-        onChangeText={(text: string) => this.handleOnChangeText(text)}
+        onSubmitEditing={(e: nativeEvent) => this.handleOnChangeText(e)}
       >
         {counter}
       </TextInput>
