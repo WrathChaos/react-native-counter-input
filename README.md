@@ -66,6 +66,8 @@ import CounterInput from "react-native-counter-input";
 | onIncreasePress               | function  | undefined | it triggers when the increase button is pressed                                           |
 | onDecreasePress               | function  | undefined | it triggers when the decrease button is pressed                                           |
 | backgroundColor               |  string   |   #fff    | change the CounterInput's background color                                                |
+| min                           |  number   | undefined | set a minimum input value                                                                 |
+| max                           |  number   | undefined | set a maximum input value                                                                 |
 | increaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active increase button background color                         |
 | decreaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active decrease button background color                         |
 | ImageComponent                | component |   Image   | set your own Image component instead of default `RN Image` component such as; `FastImage` |
