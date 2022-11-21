@@ -5746,6 +5746,13 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
+"react-native-counter-input@^1.0.0":
+  "integrity" "sha512-Z77D3wo5gstPFF23utqfDynzvEh2orGOy1f7aXjNp/GMypU33bxvzv13xOgzvKhP4xGJnEPhoxvvuSqs+GGlxw=="
+  "resolved" "https://registry.npmjs.org/react-native-counter-input/-/react-native-counter-input-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "@freakycoder/react-native-bounceable" "^1.0.3"
+
 "react-native-gradle-plugin@^0.70.3":
   "integrity" "sha512-oOanj84fJEXUg9FoEAQomA8ISG+DVIrTZ3qF7m69VQUJyOGYyDZmPqKcjvRku4KXlEH6hWO9i4ACLzNBh8gC0A=="
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.70.3.tgz"
