@@ -57,7 +57,7 @@ import CounterInput from "react-native-counter-input";
 # Configuration - Props
 
 | Property                      |   Type    |  Default  | Description                                                                               |
-| ----------------------------- | :-------: | :-------: | ----------------------------------------------------------------------------------------- |
+|-------------------------------|:---------:|:---------:|-------------------------------------------------------------------------------------------|
 | style                         |   style   |  default  | change/override the main container style                                                  |
 | horizontal                    |  boolean  |   false   | make the button horizontal design                                                         |
 | initial                       |  number   |     0     | set the initial value for the counter input                                               |
@@ -68,6 +68,7 @@ import CounterInput from "react-native-counter-input";
 | backgroundColor               |  string   |   #fff    | change the CounterInput's background color                                                |
 | min                           |  number   | undefined | set a minimum input value                                                                 |
 | max                           |  number   | undefined | set a maximum input value                                                                 |
+| reverseCounterButtons         |  boolean  |   false   | reverse the counter buttons                                                               |
 | increaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active increase button background color                         |
 | decreaseButtonBackgroundColor |  string   |  #0b349a  | change the CounterInput's active decrease button background color                         |
 | ImageComponent                | component |   Image   | set your own Image component instead of default `RN Image` component such as; `FastImage` |
@@ -77,7 +78,7 @@ import CounterInput from "react-native-counter-input";
 - [x] ~~LICENSE~~
 - [x] ~~Horizontal Feature~~
 - [ ] Animation
-- [ ] Reverse Horizontal +/- Buttons Option
+- [x] ~~Reverse Horizontal +/- Buttons Option~~
 - [ ] Write an article about the lib on Medium
 
 ## Credits
