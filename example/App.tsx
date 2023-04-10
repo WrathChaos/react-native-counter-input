@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, View, Image, Text, StatusBar} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 // import CounterInput from 'react-native-counter-input';
-import CounterInput from './lib/CounterInput';
+import CounterInput from './build/dist/CounterInput';
 const App = () => {
   return (
     <>
