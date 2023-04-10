@@ -31,6 +31,7 @@ export interface ICounterInputProps {
   min?: number;
   max?: number;
   borderRadius?: number;
+  reverseButton?: boolean;
   onIncreasePress?: (counter: number) => void;
   onDecreasePress?: (counter: number) => void;
   onChangeText?: (counter: number | string) => void;
@@ -155,6 +156,7 @@ export default class CounterInput extends React.Component<
     const {
       style,
       horizontal = false,
+      reverseButton = false,
       backgroundColor = '#fff',
       width = horizontal ? 170 : undefined,
       borderRadius = 24,
@@ -165,9 +167,9 @@ export default class CounterInput extends React.Component<
           _container(width, horizontal, backgroundColor, borderRadius),
           style,
         ]}>
-        {this.renderIncreaseCounter()}
+        {horizontal && reverseButton ? this.renderDecreaseCounter() : this.renderIncreaseCounter()}
         {this.renderTextInput()}
-        {this.renderDecreaseCounter()}
+        {horizontal && reverseButton ? this.renderIncreaseCounter() : this.renderDecreaseCounter()}
       </View>
     );
   }
