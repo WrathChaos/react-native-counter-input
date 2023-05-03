@@ -13,6 +13,7 @@
     "@freakycoder/react-native-bounceable": "^1.0.3",
     "react": "18.2.0",
     "react-native": "0.71.6",
+    "react-native-counter-input": "^2.0.2",
     "react-native-linear-gradient": "^2.6.2",
     "react-use-state-with-callback": "^1.0.2"
   },
