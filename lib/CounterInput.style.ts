@@ -1,4 +1,4 @@
-import { ViewStyle, ImageStyle, TextStyle, StyleSheet } from "react-native";
+import {ViewStyle, ImageStyle, TextStyle, StyleSheet} from 'react-native';
 
 interface Style {
   textInputStyle: TextStyle;
@@ -17,12 +17,12 @@ export const _container = (
   padding: horizontal ? 0 : 9,
   minHeight: horizontal ? 45 : 140,
   maxWidth: horizontal ? undefined : 70,
-  flexDirection: horizontal ? "row" : "column",
-  alignItems: "center",
-  justifyContent: "space-evenly",
+  flexDirection: horizontal ? 'row' : 'column',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
   shadowRadius: 8,
   shadowOpacity: 0.2,
-  shadowColor: "#000",
+  shadowColor: '#000',
   elevation: 2,
   shadowOffset: {
     width: 0,
@@ -37,12 +37,12 @@ export const _increaseButtonStyle = (
   width: 40,
   height: 40,
   borderRadius: 16,
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: isPressed ? increaseButtonBackgroundColor : "transparent",
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: isPressed ? increaseButtonBackgroundColor : 'transparent',
   shadowOpacity: isPressed ? 0.1 : 0,
   shadowRadius: 3,
-  shadowColor: "#000",
+  shadowColor: '#000',
   shadowOffset: {
     width: 0,
     height: 3,
@@ -56,12 +56,12 @@ export const _decreaseButtonStyle = (
   width: 40,
   height: 40,
   borderRadius: 16,
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: isPressed ? "transparent" : decreaseButtonBackgroundColor,
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: isPressed ? 'transparent' : decreaseButtonBackgroundColor,
   shadowOpacity: isPressed ? 0 : 0.1,
   shadowRadius: 3,
-  shadowColor: "#000",
+  shadowColor: '#000',
   shadowOffset: {
     width: 0,
     height: 3,
@@ -75,9 +75,9 @@ export default StyleSheet.create<Style>({
     fontSize: 24,
     marginTop: 12,
     marginBottom: 8,
-    alignSelf: "center",
-    fontWeight: "bold",
-    textAlign: "center",
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   buttonImageStyle: {
     width: 15,

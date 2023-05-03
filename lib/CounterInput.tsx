@@ -78,7 +78,7 @@ const CounterInput: React.FC<CounterInputProps> = ({
       setCounter(counter - 1, (newCounterValue: any) => {
         onChange?.(newCounterValue);
 
-        setPressed(true, () => {
+        setPressed(false, () => {
           onDecreasePress && onDecreasePress(newCounterValue);
         });
       });
@@ -92,18 +92,18 @@ const CounterInput: React.FC<CounterInputProps> = ({
       (min !== undefined && input < min) ||
       (max !== undefined && input > max)
     ) {
-      setCounter(oldNumber, (newCounterValue: any) => {
-        onChange?.(newCounterValue);
-
-        onChangeText && onChangeText(newCounterValue);
-        setPressed(true);
+      setCounter(0, () => {
+        setPressed(false, () => {
+          setCounter(oldNumber, (newCounterValue: any) => {
+            onChangeText?.(newCounterValue);
+            onChange?.(newCounterValue);
+          });
+        });
       });
     } else {
       setCounter(input, (newCounterValue: any) => {
+        onChangeText?.(newCounterValue);
         onChange?.(newCounterValue);
-
-        onChangeText && onChangeText(newCounterValue);
-        setPressed(true);
       });
     }
   };
