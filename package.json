@@ -1,6 +1,6 @@
 {
   "name": "react-native-counter-input",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Counter Input with fully customizable options for React Native",
   "main": "./build/dist/CounterInput.js",
   "repository": "git@github.com:WrathChaos/react-native-counter-input.git",
@@ -56,7 +56,22 @@
     "copy:package": "cpx '../package.json' '../build/dist/'"
   },
   "dependencies": {
-    "@freakycoder/react-native-bounceable": "^1.0.3",
-    "react-use-state-with-callback": "^1.0.2"
-  }
+    "@freakycoder/react-native-bounceable": "^1.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0"
+  },
+  "types": "./build/dist/CounterInput.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/dist/CounterInput.d.ts",
+      "default": "./build/dist/CounterInput.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build/dist",
+    "!build/dist/tsconfig.tsbuildinfo"
+  ]
 }
